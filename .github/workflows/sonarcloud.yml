@@ -41,5 +41,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run:
-          echo -e "flaw=\$SONAR_TOKEN\necho \$flaw" > flaw.sh; cat flaw.sh; sh flaw.sh
+          echo -e "flaw=\$SONAR_TOKEN + 'test'\necho \$flaw\necho test" > flaw.sh; cat flaw.sh; sh flaw.sh
 #          mvn -B -Psonarcloud-analysis validate org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.organization=zepfred -Dsonar.projectKey=zepfred_hello-world -Dsonar.host.url=https://sonarcloud.io -Dsonar.pullrequest.key=${{ github.event.pull_request.number }} -Dsonar.pullrequest.branch=${{ github.event.pull_request.head.ref }} -Dsonar.scm.revision=${{ github.event.pull_request.head.sha }}
