@@ -362,7 +362,7 @@ public class TimetableApp {
     }
 
     // FIXME - Even more code duplication!
-    public static Timetable generateDemoData2(DemoData demoData) {
+    public static Timetable generateDemoData3(DemoData demoData) {
         List<Timeslot> timeslots = new ArrayList<>(10);
         long nextTimeslotId = 0L;
         timeslots.add(new Timeslot(nextTimeslotId++, DayOfWeek.MONDAY, LocalTime.of(8, 30), LocalTime.of(9, 30)));
